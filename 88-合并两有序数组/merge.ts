@@ -11,7 +11,7 @@
  * 合并结果是 [1,2,2,3,5,6] ，其中斜体加粗标注的为 nums1 中的元素。
  */
 
-// 解法01: 直接合并，然后排序
+// 解法01: 先合并，再排序，时间复杂度 O((m+n)log(m+n))；空间复杂度 O(log(m+n))
 function merge01(nums1: number[], m: number, nums2: number[], n: number): void {
     nums1.splice(m, n, ...nums2)
     nums1.sort((a, b) => a - b)
